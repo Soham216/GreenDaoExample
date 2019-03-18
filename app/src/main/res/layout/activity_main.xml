@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context = ".UI.HomeScreen.MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#424242">
+
+        <LinearLayout
+            android:id="@+id/component_expense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:layout_marginBottom="28dp"
+            android:orientation="horizontal"
+            android:gravity="center" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Today's Expense :"
+                android:textSize="20sp"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/text_expense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/component_register_expense"
+            android:layout_below="@+id/component_expense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center" >
+
+            <EditText
+                android:id="@+id/text_enter_amount"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:background="#FAFAFA"
+                android:textColor="@color/colorPrimaryDark"
+                android:textCursorDrawable="@null"
+                android:padding="8dp"
+                android:inputType="number"
+                android:hint="Enter Amount"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"/>
+
+            <RadioGroup
+                android:id="@+id/radio_group_categories"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text_enter_amount"
+                android:padding="24dp"
+                android:orientation="horizontal" >
+                <RadioButton
+                    android:id="@+id/radio_button_work"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Work"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/white" />
+                <RadioButton
+                    android:id="@+id/radio_button_home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Home"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/white"/>
+                <RadioButton
+                    android:id="@+id/radio_button_personal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Personal"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/white"/>
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/button_save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:text="Save"
+                android:textSize="22sp"
+                android:textColor="#212121"
+                android:background="#64DD17" />
+
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_below="@+id/component_register_expense"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="4dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="vertical" />
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
