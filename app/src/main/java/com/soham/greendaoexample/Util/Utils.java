@@ -1,11 +1,7 @@
 package com.soham.greendaoexample.Util;
 
 import android.content.Context;
-import android.content.SharedPreferences;
 import android.widget.Toast;
-
-import com.soham.greendaoexample.UI.HomeScreen.MainActivity;
-import com.soham.greendaoexample.UI.HomeScreen.MainContract;
 
 public class Utils {
 

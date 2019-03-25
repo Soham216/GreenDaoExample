@@ -13,8 +13,8 @@ public class MainPresenter implements MainContract.Presenter{
     private MainContract.View view;
     private MainModel model;
 
-    SharedPreferences sharedPreferences;
-    ExpenseDao expenseDao;
+    private SharedPreferences sharedPreferences;
+    private ExpenseDao expenseDao;
 
     MainPresenter(MainContract.View view, ExpenseDao expenseDao, SharedPreferences sharedPreferences){
         this.model = new MainModel();

@@ -26,15 +26,13 @@ public class ExampleMockTest {
     ExpenseDao expenseDao;
     @Mock
     List<Expense> mockList;
-    @Mock
-    Utils mockUtil;
 
-    public static final String DAILY_EXPENSE = "10000";
-    public static final String AMOUNT = "2022";
+    private static final String DAILY_EXPENSE = "10000";
+    private static final String AMOUNT = "2022";
 
     @Test
     public void testDailyExpenseCalculator() {
-        String result = mockUtil.calculateTotalDailyExpense(DAILY_EXPENSE, AMOUNT);
+        String result = Utils.calculateTotalDailyExpense(DAILY_EXPENSE, AMOUNT);
         assertThat(result, is("12022"));
     }
 
