@@ -14,10 +14,8 @@ public class Utils {
     }
 
     public static String calculateTotalDailyExpense(String dailyExpense, String currentExpense){
-
         int updatedDailyExpense = Integer.parseInt(dailyExpense) + Integer.parseInt(currentExpense);
         dailyExpense = "" + updatedDailyExpense;
-
         return dailyExpense;
     }
 
